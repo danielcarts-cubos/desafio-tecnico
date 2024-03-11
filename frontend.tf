@@ -19,8 +19,8 @@ resource "docker_container" "nginx" {
   restart = "always"
 
   ports {
-    internal = 8080
-    external = 8080
+    internal = "8080"
+    external = var.host_port
   }
 
   networks_advanced {
